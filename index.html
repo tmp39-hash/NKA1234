@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome Dino Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="game-container">
+    <div class="header">
+      <div class="title">T-REX RUNNER</div>
+      <div class="scores">
+        <span class="hi-score" id="hiScore">HI 00000</span>
+        <span class="current-score" id="score">00000</span>
+      </div>
+    </div>
+
+    <div class="canvas-wrapper">
+      <canvas id="gameCanvas" width="800" height="250"></canvas>
+      
+      <div id="startOverlay" class="overlay">
+        <div class="message-box">
+          <h2>PRESS SPACE TO START</h2>
+          <p>Use [SPACE] or [↑] to Jump</p>
+          <p>Use [↓] to Duck</p>
+          <button id="startBtn" class="btn">START GAME</button>
+        </div>
+      </div>
+
+      <div id="gameOverOverlay" class="overlay hidden">
+        <div class="message-box">
+          <h2>G A M E  O V E R</h2>
+          <p id="finalScoreText">SCORE: 0</p>
+          <button id="restartBtn" class="btn">PLAY AGAIN</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-panel">
+      <div class="audio-controls">
+        <button id="soundToggle" class="icon-btn" title="Toggle Sound">🔊 Sound: ON</button>
+      </div>
+      <div class="touch-controls">
+        <button id="jumpTouchBtn" class="touch-btn">JUMP ⬆</button>
+        <button id="duckTouchBtn" class="touch-btn">DUCK ⬇</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="audio.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
+
